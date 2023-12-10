@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>formTable</title>
+    <script src="main.js>"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!--Реалізовуємо форму для реєстрації.
+Поля:
+Ім'я, Прізвище (Текстові поля)
+Дата народження (Текстове поле)
+Стать (radio)
+Місто (select)
+Адреса (textarea)
+Мови, якими володіє (checkbox)
+….
+Кнопка “Зберегти”
+За натисканням на кнопку замість форми повинна виводитися “таблиця” з даними, які ввів користувач.-->
 
+<table>
+
+    <tr>
+        <td>
+            <form id="once" action="/apply/" method="POST">
+                <label>
+                    Ім'я, Прізвище :
+                    <input type="text" name="name" id="name" placeholder="Іван Іванич" required autofocus>
+                </label>
+
+        </td>
+        <td>
+            <form id="once" action="/apply/" method="POST">
+                <label>
+                    Дата народження :
+                    <input type="text" name="name" id="name" placeholder="дата місяц рік" required autofocus>
+                </label>
+
+        </td>
+
+
+        <td><input type="radio" id="man" name="drone" value="man" />
+            <label>man</label>
+        </td>
+        <td><input type="radio" id="woman" name="drone" value="woman" checked />
+            <label>woman</label></td>
+    </tr>
+    <tr>
+        <td><select name="select">
+            <!--Supplement an id here instead of using 'name'-->
+            <option value="value1">місто</option>
+            <option value="value2" selected>не місто</option>
+        </select>
+        </td>
+        <td><textarea name="textarea" >Адреса</textarea>
+        </td>
+        <td>
+            <label>
+                Мови, якими володіє
+                English
+                <input type="checkbox" name="language" value="English">
+            </label>
+        </td>
+        <td>
+            <label>
+                Мови, якими володіє
+                German
+                <input type="checkbox" name="language" value="German">
+            </label>
+        </td>
+
+    </tr>
+</table>
+<button type="submit"class="submit">Зберегти</button>
 
 </body>
 </html>
